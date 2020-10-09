@@ -1,5 +1,9 @@
 # Object Oriented Programming Game Project
 
+## Goku's little quest
+
+<p align="center"><img src="./images/db/screenrecord.gif"></p>
+
 <p align="center"><img src="./images/screenshot.png"></p>
 
 # Introduction
