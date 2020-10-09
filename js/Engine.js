@@ -15,6 +15,7 @@ class Engine {
     // that contains instances of the Enemy class
     this.enemies = [];
     this.dragonballs = [];
+    this.senzus = [];
 
     // We add the background image to the game
     addBackground(this.root);
@@ -52,6 +53,19 @@ class Engine {
 
     // We use the number of milliseconds since the last call to gameLoop to update the enemy positions.
     // Furthermore, if any enemy is below the bottom of our game, its destroyed property will be set. (See Enemy.js)
+    this.senzus.forEach((senzu) => {
+      if (
+        senzu.x === this.player.x &&
+        senzu.y > GAME_HEIGHT - PLAYER_HEIGHT - 20
+      ) {
+        senzu.destroyed = true;
+        this.score += 200;
+        if (appDiv.contains(senzu.domElement)) {
+          appDiv.removeChild(senzu.domElement);
+        }
+      }
+    });
+
     this.enemies.forEach((enemy) => {
       enemy.update(timeDiff);
       this.dragonballs.forEach((db) => {
@@ -81,6 +95,10 @@ class Engine {
 
     this.dragonballs = this.dragonballs.filter((db) => {
       return !db.destroyed;
+    });
+
+    this.senzus = this.senzus.filter((senzu) => {
+      return !senzu.destroyed;
     });
     // We need to perform the addition of enemies until we have enough enemies.
     while (this.enemies.length < MAX_ENEMIES) {

@@ -80,6 +80,7 @@ const startGameHandler = () => {
   gameEngine.gameLoop();
   scoreText.update(0);
   hiScoreText.updateHiScore();
+  startDroppingSnezus();
 };
 
 startMenu.append(startBtn);
@@ -123,3 +124,12 @@ const upArrowKeys = (event) => {
   //}
 };
 document.addEventListener("keydown", upArrowKeys);
+
+const startDroppingSnezus = () => {
+  setInterval(() => {
+    const senzuSpots = GAME_WIDTH / SENZU_WIDTH;
+    const randomSpot = Math.floor(Math.random() * senzuSpots);
+    let senzuDrop = new Senzu(appDiv, randomSpot);
+    gameEngine.senzus.push(senzuDrop);
+  }, 7000);
+};

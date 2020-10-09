@@ -28,3 +28,7 @@ const DB_SPRITE_ARR = [
   "images/db/svg/dragonball3.svg",
   "images/db/svg/dragonball4.svg",
 ];
+
+const SENZU_WIDTH = 85;
+const SENZU_HEIGHT = 85;
+const MAX_SENZU = 1;

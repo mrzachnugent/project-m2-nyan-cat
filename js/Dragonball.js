@@ -12,7 +12,7 @@ class Dragonball {
     this.domElement.style.zIndex = 6;
     this.domElement.style.width = DRAGONBALL_WIDTH;
     this.root.appendChild(this.domElement);
-    this.speed = 0.6;
+
     // console.log({ y: this.y, domElement: this.domElement, root: this.root });
     this.bdSpriteAnim();
     setInterval(() => {
