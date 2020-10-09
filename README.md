@@ -4,6 +4,8 @@
 
 <p align="center"><img src="./images/db/screenrecord.gif"></p>
 
+[Here is my Netlify link](https://vibrant-chandrasekhar-9bd977.netlify.app)
+
 <p align="center"><img src="./images/screenshot.png"></p>
 
 # Introduction
