@@ -80,7 +80,6 @@ const startGameHandler = () => {
   gameEngine.gameLoop();
   scoreText.update(0);
   hiScoreText.updateHiScore();
-  startDroppingSnezus();
 };
 
 startMenu.append(startBtn);
@@ -133,3 +132,4 @@ const startDroppingSnezus = () => {
     gameEngine.senzus.push(senzuDrop);
   }, 7000);
 };
+startDroppingSnezus();
